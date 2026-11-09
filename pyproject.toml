@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-leak"
+version = "0.1.0"
+description = "Checks that a time-indexed prediction pipeline never uses information from after its scoring instant."
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Pengjun Lu"}]
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
