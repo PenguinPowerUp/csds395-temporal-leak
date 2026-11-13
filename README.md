@@ -1,6 +1,6 @@
 # temporal-leak
 
-Small checks that a time-indexed prediction pipeline never uses information from after its scoring instant. They know nothing about the data's domain: any table with a time column works. Each check raises `LeakageError` with a readable message, so it can sit inside a pipeline or a test.
+Small checks that a time-indexed prediction pipeline never uses information from after its scoring instant.
 
 ## Install
 
